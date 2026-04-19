@@ -61,8 +61,9 @@ Designed with a **high-end SaaS-style UI**, smooth animations, and a conversion-
 
 ## 👨‍💻 Developer
 
-**Sanju K**
+**Sanjivkumar Kalashetti**
 MCA Student | Full Stack Developer
+Website & Mobile App Development
 
 ---
 
