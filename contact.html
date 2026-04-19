@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | The Rootz Lab</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/logo.jpeg" rel="icon">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        deepGreen: '#0B2B26',
+                        forest: '#163832',
+                        accentCopper: '#d97706',
+                        mintLight: '#DAF1DE',
+                        slateText: '#677E8A',
+                        darkSlate: '#122E34'
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        logo: ['Montserrat', 'sans-serif']
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+    <style>
+        /* ===== MOBILE WIDTH FIX ===== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Prevent elements from going outside */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .glass-header {
+            background: rgba(11, 43, 38, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-pattern {
+            background-color: #0B2B26;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(167, 45%, 15%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(37, 90%, 42%, 0.15) 0, transparent 50%);
+        }
+    </style>
+
+</head>
+
+
+<body class="bg-[#fcfdfd] text-darkSlate">
+    <!-- Floating Call Button -->
+
+    <a href="tel:+917903821827"
+        class="fixed bottom-24 right-6 bg-deepGreen text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50">
+
+        <i data-lucide="phone"></i>
+
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+
+    <a href="https://wa.me/917903821827"
+        class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+
+    <!-- Navigation -->
+
+    <nav class="fixed w-full z-50 glass-header border-b border-white/10 transition-all duration-300" id="navbar">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+            <div class="flex justify-between items-center h-24 md:h-28">
+
+
+                <!-- Logo -->
+
+                <div class="flex items-center gap-4">
+
+                    <div class="rounded-full">
+
+                        <img src="assets/logo.jpeg" class="h-24 w-24 md:h-28 md:w-28 object-cover rounded-full">
+
+                    </div>
+
+                    <div class="hidden md:block">
+
+                        <span class="text-white font-logo text-lg md:text-xl font-semibold">
+                            The Rootz Lab
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Desktop Menu -->
+
+                <div class="hidden lg:flex space-x-10 text-white/80 font-semibold text-sm uppercase tracking-wide">
+
+                    <a href="index.html" class="hover:text-accentCopper transition">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="hover:text-accentCopper transition">
+                        About
+                    </a>
+
+                    <a href="services.html" class="hover:text-accentCopper transition">
+                        Services
+                    </a>
+
+                    <a href="contact.html" class="hover:text-accentCopper transition">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- Right Side -->
+
+                <div class="flex items-center gap-5">
+
+
+                    <button id="menuBtn" class="lg:hidden text-white">
+
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+
+                    </button>
+
+
+                    <a href="tel:+917903821827"
+                        class="hidden md:flex items-center gap-2 text-white font-semibold text-sm">
+
+                        <i data-lucide="phone" class="w-4 h-4 text-accentCopper"></i>
+
+                        +91 7903821827
+
+                    </a>
+
+
+                    <a href="contact.html"
+                        class="hidden md:inline-block bg-accentCopper text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-[#c46605] transition text-sm">
+
+                        Book Consultation
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+        class="hidden fixed top-20 left-0 w-full bg-deepGreen text-white text-center py-6 space-y-6 z-40">
+
+        <a href="index.html" class="block">Home</a>
+
+        <a href="about.html" class="block">About</a>
+
+        <a href="services.html" class="block">Services</a>
+
+        <a href="contact.html" class="block">Contact</a>
+
+        <!-- Book Consultation Button -->
+
+        <a href="#contact" class="inline-block bg-accentCopper text-white px-6 py-3 rounded-full font-bold shadow-lg">
+
+            Book Consultation
+
+        </a>
+
+    </div>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero-pattern min-h-[60vh] flex items-center pt-20 overflow-hidden relative">
+
+        <!-- Animated Background Glow -->
+
+        <div
+            class="absolute w-[500px] h-[500px] bg-accentCopper opacity-10 blur-[140px] -top-40 -left-40 animate-pulse">
+        </div>
+
+        <div class="absolute w-[500px] h-[500px] bg-white opacity-5 blur-[140px] -bottom-40 -right-40 animate-pulse">
+        </div>
+
+
+
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <h1 class="text-5xl font-extrabold text-white mb-6" data-aos="fade-up">
+
+                Contact Us
+
+            </h1>
+
+            <p class="text-slateText text-lg" data-aos="fade-up">
+
+                Book Your Consultation Today
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT SECTION -->
+
+
+    <!-- Lead Form Section -->
+    <section id="contact" class="py-32 bg-white relative overflow-hidden">
+
+        <!-- Soft Premium Glow -->
+        <div
+            class="absolute w-[400px] h-[400px] bg-accentCopper opacity-10 blur-[120px] -top-20 -left-20 animate-pulse">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="bg-mintLight rounded-[4rem] p-8 lg:p-20 overflow-hidden relative
+transition duration-700 hover:shadow-2xl">
+
+
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-accentCopper opacity-10 rounded-full -mr-20 -mt-20 animate-pulse">
+                </div>
+
+
+
+                <div class="grid lg:grid-cols-2 gap-16 relative z-10">
+
+
+
+                    <!-- Left Side -->
+
+                    <div data-aos="fade-right">
+
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-deepGreen mb-6">
+
+                            Take the First Step to a New
+
+                            <span class="text-accentCopper">
+
+                                You.
+
+                            </span>
+
+                        </h2>
+
+
+                        <p class="text-forest font-semibold mb-10 italic">
+
+                            Book your private, no-obligation scalp
+                            analysis today.
+
+                        </p>
+
+
+                        <div class="space-y-6">
+
+
+
+                            <div class="flex items-center gap-4 text-deepGreen font-bold
+transition duration-500 hover:translate-x-2">
+
+                                <i data-lucide="map-pin"
+                                    class="text-accentCopper transition duration-500 hover:scale-125"></i>
+
+                                Shop No.107, 1st Floor, Kodre Plaza, Adjoining Zen Estate, Riverdale Road, Kharadi, Pune
+                                - 411014
+
+                            </div>
+
+
+
+                            <div class="flex items-center gap-4 text-deepGreen font-bold
+transition duration-500 hover:translate-x-2">
+
+                                <i data-lucide="phone"
+                                    class="text-accentCopper transition duration-500 hover:scale-125"></i>
+
+                                +91 7903821827
+
+                            </div>
+
+
+
+                            <div class="flex items-center gap-4 text-deepGreen font-bold
+transition duration-500 hover:translate-x-2">
+
+                                <i data-lucide="mail"
+                                    class="text-accentCopper transition duration-500 hover:scale-125"></i>
+
+                                therootzhairlab@gmail.com
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- Form -->
+
+                    <form id="bookingForm" class="bg-white p-10 rounded-[3rem] shadow-xl space-y-6
+transition duration-700 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-left">
+
+
+
+                        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-2xl bg-slate-50 border-none outline-none
+focus:ring-2 focus:ring-accentCopper font-medium
+transition duration-500 focus:scale-[1.02]">
+
+
+
+                        <input type="tel" placeholder="Phone Number" class="w-full p-4 rounded-2xl bg-slate-50 border-none outline-none
+focus:ring-2 focus:ring-accentCopper font-medium
+transition duration-500 focus:scale-[1.02]">
+
+
+
+                        <select class="w-full p-4 rounded-2xl bg-slate-50 border-none outline-none
+focus:ring-2 focus:ring-accentCopper font-medium text-slateText
+transition duration-500 focus:scale-[1.02]">
+
+                            <option>Select Service</option>
+
+                            <option>New User Consultation</option>
+
+                            <option>New Hair Patch</option>
+
+                            <option>Hair Patch Maintenance</option>
+
+                        </select>
+
+                        <div>
+                            <label class="text-slateText text-sm font-semibold">
+                                Preferred Date
+                            </label>
+
+                            <input type="date" class="w-full p-4 rounded-2xl bg-slate-50 border-none outline-none
+focus:ring-2 focus:ring-accentCopper font-medium">
+                        </div>
+
+                        <div>
+                            <label class="text-slateText text-sm font-semibold">
+                                Preferred Time
+                            </label>
+
+                            <input type="time" class="w-full p-4 rounded-2xl bg-slate-50 border-none outline-none
+focus:ring-2 focus:ring-accentCopper font-medium">
+                        </div>
+
+
+
+                        <button class="w-full bg-deepGreen text-white py-5 rounded-2xl font-black text-xl
+hover:bg-accentCopper transition-all duration-500
+shadow-xl shadow-deepGreen/20 uppercase tracking-widest
+hover:scale-105 hover:shadow-2xl">
+
+                            Book Free Appointment
+
+                        </button>
+
+
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MAP -->
+
+
+    <section class="py-20 bg-white">
+
+
+        <div class="max-w-7xl mx-auto px-6">
+
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30259.781332128583!2d73.92539531868096!3d18.55271738298801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sShop%20No.107%2C%201st%20Floor%2C%20Kodre%20Plaza%2C%20Adjoining%20Zen%20Estate%2C%20Riverdale%20Road%2C%20Kharadi%2C%20Pune%20-%20411014!5e0!3m2!1sen!2sin!4v1772513861002!5m2!1sen!2sin"
+                width="100%" height="400" class="rounded-3xl shadow-xl">
+            </iframe>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+
+    <footer class="bg-deepGreen text-white py-10 text-center">
+
+        <p>© 2026 The Rootz Lab</p>
+
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init();
+
+        lucide.createIcons();
+
+        // Toggle Menu
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+
+            mobileMenu.classList.toggle('hidden');
+
+        });
+
+        document.getElementById("bookingForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                let name = document.querySelector("input[type=text]").value;
+                let phone = document.querySelector("input[type=tel]").value;
+                let service = document.querySelector("select").value;
+                let date = document.querySelector("input[type=date]").value;
+                let time = document.querySelector("input[type=time]").value;
+
+                let message =
+                    "Name: " + name +
+                    "%0APhone: " + phone +
+                    "%0AService: " + service +
+                    "%0ADate: " + date +
+                    "%0ATime: " + time;
+
+                window.open(
+                    "https://wa.me/917903821827?text=" + message,
+                    "_blank"
+                );
+
+            });
+    </script>
+
+</body>
+
+</html>

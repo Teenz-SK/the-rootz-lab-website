@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | The Rootz Lab</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/logo.jpeg" rel="icon">
+    
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        deepGreen: '#0B2B26',
+                        forest: '#163832',
+                        accentCopper: '#d97706',
+                        mintLight: '#DAF1DE',
+                        slateText: '#677E8A',
+                        darkSlate: '#122E34'
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        logo: ['Montserrat', 'sans-serif']
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* existing css below */
+        .glass-header {
+            background: rgba(11, 43, 38, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-pattern {
+            background-color: #0B2B26;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(167, 45%, 15%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(37, 90%, 42%, 0.15) 0, transparent 50%);
+        }
+
+        /* REVIEW SLIDER */
+
+        .review-slider {
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .review-track {
+            display: flex;
+            gap: 40px;
+            width: 200%;
+            animation: reviewScroll 30s linear infinite;
+        }
+
+        .review-card {
+            min-width: 320px;
+        }
+
+        @media(max-width:768px) {
+
+            .review-card {
+                min-width: 260px;
+            }
+
+        }
+
+        @keyframes reviewScroll {
+
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body class="bg-[#fcfdfd] text-darkSlate">
+    <!-- Floating Call Button -->
+
+    <a href="tel:+917903821827"
+        class="fixed bottom-24 right-6 bg-deepGreen text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50">
+
+        <i data-lucide="phone"></i>
+
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+
+    <a href="https://wa.me/917903821827"
+        class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+
+    <!-- Navigation -->
+
+    <nav class="fixed w-full z-50 glass-header border-b border-white/10 transition-all duration-300" id="navbar">
+
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+
+            <div class="flex justify-between items-center h-24 md:h-28">
+
+
+                <!-- Logo -->
+
+                <div class="flex items-center gap-4">
+
+                    <div class="rounded-full">
+
+                        <img src="assets/logo.jpeg" class="h-24 w-24 md:h-28 md:w-28 object-cover rounded-full">
+
+                    </div>
+
+                    <div class="hidden md:block">
+
+                        <span class="text-white font-logo text-lg md:text-xl font-semibold">
+                            The Rootz Lab
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Desktop Menu -->
+
+                <div class="hidden lg:flex space-x-10 text-white/80 font-semibold text-sm uppercase tracking-wide">
+
+                    <a href="index.html" class="hover:text-accentCopper transition">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="hover:text-accentCopper transition">
+                        About
+                    </a>
+
+                    <a href="services.html" class="hover:text-accentCopper transition">
+                        Services
+                    </a>
+
+                    <a href="contact.html" class="hover:text-accentCopper transition">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- Right Side -->
+
+                <div class="flex items-center gap-5">
+
+
+                    <button id="menuBtn" class="lg:hidden text-white">
+
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+
+                    </button>
+
+
+                    <a href="tel:+917903821827"
+                        class="hidden md:flex items-center gap-2 text-white font-semibold text-sm">
+
+                        <i data-lucide="phone" class="w-4 h-4 text-accentCopper"></i>
+
+                        +91 7903821827
+
+                    </a>
+
+
+                    <a href="contact.html"
+                        class="hidden md:inline-block bg-accentCopper text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-[#c46605] transition text-sm">
+
+                        Book Consultation
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+        class="hidden fixed top-20 left-0 w-full bg-deepGreen text-white text-center py-6 space-y-6 z-40">
+
+        <a href="index.html" class="block">Home</a>
+
+        <a href="about.html" class="block">About</a>
+
+        <a href="services.html" class="block">Services</a>
+
+        <a href="contact.html" class="block">Contact</a>
+
+        <!-- Book Consultation Button -->
+
+        <a href="#contact" class="inline-block bg-accentCopper text-white px-6 py-3 rounded-full font-bold shadow-lg">
+
+            Book Consultation
+
+        </a>
+
+    </div>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero-pattern min-h-[60vh] flex items-center pt-20 overflow-hidden relative">
+
+        <!-- Animated Background Glow -->
+
+        <div
+            class="absolute w-[500px] h-[500px] bg-accentCopper opacity-10 blur-[140px] -top-40 -left-40 animate-pulse">
+        </div>
+
+        <div class="absolute w-[500px] h-[500px] bg-white opacity-5 blur-[140px] -bottom-40 -right-40 animate-pulse">
+        </div>
+
+
+
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <h1 class="text-5xl font-extrabold text-white mb-6" data-aos="fade-up">
+
+                About The Rootz Lab
+
+            </h1>
+
+            <p class="text-slateText text-lg max-w-xl mx-auto" data-aos="fade-up">
+
+                Restoring Confidence Through Advanced Hair Solutions
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT CONTENT -->
+
+
+    <section class="py-24 bg-white">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+
+                <div data-aos="fade-right">
+
+                    <h2 class="text-4xl font-extrabold text-deepGreen mb-6">
+
+                        Who We Are
+
+                    </h2>
+
+
+                    <p class="text-slateText leading-relaxed mb-6 text-justify">
+
+                        We specialize in restoring not just hair, but confidence. For over 10 years, we have focused
+                        exclusively on advanced, non-surgical hair patch solutions using 100% human hair. Our customized
+                        systems are designed to blend seamlessly with your natural hair, creating a full,
+                        natural-looking appearance that effectively eliminates the visible signs of baldness.
+
+                    </p>
+
+
+                    <p class="text-slateText leading-relaxed mb-6 text-justify">
+
+                        We understand that hair loss is deeply personal, so our approach is discreet, empathetic, and
+                        results-driven. Every client receives a tailored consultation to determine the right hair patch
+                        style, density, and attachment method for their lifestyle.
+
+                    </p>
+
+
+                    <p class="text-slateText leading-relaxed mb-6 text-justify">
+
+                        The process is painless, quick, and reversible — with no surgery, no scars, and minimal
+                        downtime. Our experienced specialists ensure secure fixing, natural hairline design, and easy
+                        maintenance guidance so you can live, work, and socialize with complete confidence.
+
+                        Whether you are just starting to notice thinning or have advanced baldness, The Rootz Lab offers
+                        a safe, proven, and aesthetic solution to help you look and feel your best.
+
+                    </p>
+
+                </div>
+
+
+
+                <div data-aos="fade-left">
+
+                    <img src="assets/img/result-1.jpg" class="rounded-3xl shadow-2xl">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- STATS -->
+
+    <section class="py-20 bg-mintLight/30">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 text-center gap-10">
+
+                <!-- Years Experience -->
+                <div data-aos="fade-up">
+
+                    <p class="text-5xl font-black text-deepGreen">
+                        10+
+                    </p>
+
+                    <p class="text-slateText font-semibold">
+                        Years Experience
+                    </p>
+
+                </div>
+
+                <!-- Natural Look -->
+                <div data-aos="fade-up" data-aos-delay="200">
+
+                    <p class="text-5xl font-black text-deepGreen">
+                        100%
+                    </p>
+
+                    <p class="text-slateText font-semibold">
+                        Natural Look
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Customer Reviews Section -->
+    <section class="py-24 bg-mintLight/30 relative overflow-hidden">
+
+        <!-- Soft Background Animation -->
+
+        <div
+            class="absolute w-[350px] h-[350px] bg-accentCopper opacity-10 blur-[120px] -top-20 -right-20 animate-pulse">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16" data-aos="fade-up">
+
+                <h2 class="text-4xl font-extrabold text-deepGreen">
+
+                    Our Customer Reviews
+
+                </h2>
+
+                <p class="text-slateText mt-4 font-semibold">
+
+                    Real Clients • Real Results
+
+                </p>
+
+            </div>
+
+
+            <div class="review-slider">
+
+                <div class="review-track">
+
+
+                    <!-- Review 1 -->
+
+                    <div class="review-card bg-white p-6 rounded-2xl shadow-xl
+transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+                        <h4 class="font-bold mb-2">
+                            Sneha Joshi
+                        </h4>
+
+                        <div class="text-accentCopper text-lg animate-pulse">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="mt-3 text-gray-600">
+
+                            I never imagined I’d feel this confident again.
+                            The transformation was amazing and my
+                            patch looks unbelievably real.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Review 2 -->
+
+                    <div class="review-card bg-white p-6 rounded-2xl shadow-xl
+transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+                        <h4 class="font-bold mb-2">
+                            Imran Shaikh
+                        </h4>
+
+                        <div class="text-accentCopper text-lg animate-pulse">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="mt-3 text-gray-600">
+
+                            Excellent service and very reasonable pricing.
+                            The most affordable hair patch in Pune.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Review 3 -->
+
+                    <div class="review-card bg-white p-6 rounded-2xl shadow-xl
+transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+                        <h4 class="font-bold mb-2">
+                            Nikhil Jadhav
+                        </h4>
+
+                        <div class="text-accentCopper text-lg animate-pulse">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="mt-3 text-gray-600">
+
+                            My patch looked completely natural and now I
+                            walk confidently in public.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Review 4 -->
+
+                    <div class="review-card bg-white p-6 rounded-2xl shadow-xl
+transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+                        <h4 class="font-bold mb-2">
+                            Siddharth More
+                        </h4>
+
+                        <div class="text-accentCopper text-lg animate-pulse">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="mt-3 text-gray-600">
+
+                            Better quality than others in Pune.
+                            Very professional team.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Duplicate -->
+
+                    <div class="review-card bg-white p-6 rounded-2xl shadow-xl
+transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+                        <h4 class="font-bold mb-2">
+                            Sneha Joshi
+                        </h4>
+
+                        <div class="text-accentCopper text-lg animate-pulse">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="mt-3 text-gray-600">
+
+                            I never imagined I’d feel this confident again.
+                            The transformation was amazing.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="review-card bg-white p-6 rounded-2xl shadow-xl
+transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+                        <h4 class="font-bold mb-2">
+                            Imran Shaikh
+                        </h4>
+
+                        <div class="text-accentCopper text-lg animate-pulse">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="mt-3 text-gray-600">
+
+                            Excellent service and very reasonable pricing.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT CTA -->
+
+
+    <section class="py-24 bg-deepGreen text-white text-center">
+
+        <div class="max-w-4xl mx-auto px-6">
+
+
+            <h2 class="text-4xl font-extrabold mb-6" data-aos="fade-up">
+
+                Ready To Transform Your Look?
+
+            </h2>
+
+
+            <p class="text-slateText mb-8" data-aos="fade-up">
+
+                Book your consultation today.
+
+            </p>
+
+
+            <a href="contact.html" class="bg-accentCopper px-10 py-4 rounded-full font-bold">
+
+                Book Appointment
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+
+    <footer class="bg-deepGreen text-white py-10 text-center">
+
+        <p>© 2026 The Rootz Lab</p>
+
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init();
+
+        lucide.createIcons();
+
+        // Toggle Menu
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+
+            mobileMenu.classList.toggle('hidden');
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
